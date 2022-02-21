@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DB298E927C3356800D15C0E /* NameListDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E327C3356800D15C0E /* NameListDetailPresenter.swift */; };
+		2DB298EA27C3356800D15C0E /* NameListDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E427C3356800D15C0E /* NameListDetailWorker.swift */; };
+		2DB298EB27C3356800D15C0E /* NameListDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E527C3356800D15C0E /* NameListDetailRouter.swift */; };
+		2DB298EC27C3356800D15C0E /* NameListDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E627C3356800D15C0E /* NameListDetailModels.swift */; };
+		2DB298ED27C3356800D15C0E /* NameListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E727C3356800D15C0E /* NameListDetailViewController.swift */; };
+		2DB298EE27C3356800D15C0E /* NameListDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298E827C3356800D15C0E /* NameListDetailInteractor.swift */; };
+		2DB298F027C33B3900D15C0E /* NameListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB298EF27C33B3900D15C0E /* NameListDetailView.swift */; };
 		2DD9163127BB656A009FF312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9163027BB656A009FF312 /* AppDelegate.swift */; };
 		2DD9163327BB656A009FF312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9163227BB656A009FF312 /* SceneDelegate.swift */; };
 		2DD9163A27BB656C009FF312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD9163927BB656C009FF312 /* Assets.xcassets */; };
@@ -24,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DB298E327C3356800D15C0E /* NameListDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailPresenter.swift; sourceTree = "<group>"; };
+		2DB298E427C3356800D15C0E /* NameListDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailWorker.swift; sourceTree = "<group>"; };
+		2DB298E527C3356800D15C0E /* NameListDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailRouter.swift; sourceTree = "<group>"; };
+		2DB298E627C3356800D15C0E /* NameListDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailModels.swift; sourceTree = "<group>"; };
+		2DB298E727C3356800D15C0E /* NameListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailViewController.swift; sourceTree = "<group>"; };
+		2DB298E827C3356800D15C0E /* NameListDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailInteractor.swift; sourceTree = "<group>"; };
+		2DB298EF27C33B3900D15C0E /* NameListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListDetailView.swift; sourceTree = "<group>"; };
 		2DD9162D27BB656A009FF312 /* learnVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD9163027BB656A009FF312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD9163227BB656A009FF312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +67,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DB298E227C3354C00D15C0E /* NameListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2DB298F127C33B3E00D15C0E /* view */,
+				2DB298E327C3356800D15C0E /* NameListDetailPresenter.swift */,
+				2DB298E427C3356800D15C0E /* NameListDetailWorker.swift */,
+				2DB298E527C3356800D15C0E /* NameListDetailRouter.swift */,
+				2DB298E627C3356800D15C0E /* NameListDetailModels.swift */,
+				2DB298E727C3356800D15C0E /* NameListDetailViewController.swift */,
+				2DB298E827C3356800D15C0E /* NameListDetailInteractor.swift */,
+			);
+			path = NameListDetail;
+			sourceTree = "<group>";
+		};
+		2DB298F127C33B3E00D15C0E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2DB298EF27C33B3900D15C0E /* NameListDetailView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		2DD9162427BB656A009FF312 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				2DD9165227BB668B009FF312 /* Network */,
+				2DB298E227C3354C00D15C0E /* NameListDetail */,
 				2DD9164527BB658B009FF312 /* NameList */,
 			);
 			path = Scenes;
@@ -203,16 +240,23 @@
 			files = (
 				2DD9164F27BB65D3009FF312 /* NameListModels.swift in Sources */,
 				2DD9165127BB65D3009FF312 /* NameListInteractor.swift in Sources */,
+				2DB298E927C3356800D15C0E /* NameListDetailPresenter.swift in Sources */,
+				2DB298EB27C3356800D15C0E /* NameListDetailRouter.swift in Sources */,
 				2DD9165C27BB6EC9009FF312 /* NameListCell.swift in Sources */,
 				2DD9163127BB656A009FF312 /* AppDelegate.swift in Sources */,
 				2DD9165027BB65D3009FF312 /* NameListViewController.swift in Sources */,
 				2DD9164D27BB65D3009FF312 /* NameListWorker.swift in Sources */,
+				2DB298EE27C3356800D15C0E /* NameListDetailInteractor.swift in Sources */,
+				2DB298EA27C3356800D15C0E /* NameListDetailWorker.swift in Sources */,
+				2DB298EC27C3356800D15C0E /* NameListDetailModels.swift in Sources */,
 				2DD9165727BB66BD009FF312 /* Model.swift in Sources */,
+				2DB298ED27C3356800D15C0E /* NameListDetailViewController.swift in Sources */,
 				2DD9163327BB656A009FF312 /* SceneDelegate.swift in Sources */,
 				2DD9165A27BB6C25009FF312 /* NameListView.swift in Sources */,
 				2DD9165427BB669C009FF312 /* DummyNetwork.swift in Sources */,
 				2DD9164C27BB65D3009FF312 /* NameListPresenter.swift in Sources */,
 				2DD9164E27BB65D3009FF312 /* NameListRouter.swift in Sources */,
+				2DB298F027C33B3900D15C0E /* NameListDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

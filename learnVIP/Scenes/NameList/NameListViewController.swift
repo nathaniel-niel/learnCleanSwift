@@ -121,5 +121,10 @@ extension NameListViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.routeToNameListDetail(segue: nil)
+        
+    }
+    
     
 }

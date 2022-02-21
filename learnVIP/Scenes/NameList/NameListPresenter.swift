@@ -27,5 +27,6 @@ class NameListPresenter: NameListPresentationLogic
   {
       let viewModel = NameListScene.Load.ViewModel(nameList: response.nameList)
     viewController?.displayData(viewModel: viewModel)
+      
   }
 }

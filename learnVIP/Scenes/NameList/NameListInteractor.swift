@@ -19,14 +19,14 @@ protocol NameListBusinessLogic
 
 protocol NameListDataStore
 {
-  //var name: String { get set }
+  var name: [NameList]? { get set }
 }
 
 class NameListInteractor: NameListBusinessLogic, NameListDataStore
 {
   var presenter: NameListPresentationLogic?
   var worker: NameListWorker?
-  //var name: String = ""
+  var name: [NameList]?
   
   // MARK: Do something
   
@@ -34,6 +34,7 @@ class NameListInteractor: NameListBusinessLogic, NameListDataStore
   {
     worker = NameListWorker()
       worker?.fetchData(completion: { name in
+          self.name = name
           let response = NameListScene.Load.Response(nameList: name)
           presenter?.presentData(response: response)
       })

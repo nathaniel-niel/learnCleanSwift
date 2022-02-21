@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol NameListRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+  func routeToNameListDetail(segue: UIStoryboardSegue?)
 }
 
 protocol NameListDataPassing
@@ -29,32 +29,29 @@ class NameListRouter: NSObject, NameListRoutingLogic, NameListDataPassing
   
   // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+  func routeToNameListDetail(segue: UIStoryboardSegue?)
+  {
+      let destinationVC = NameListDetailViewController()
+      var destinationDS = destinationVC.router!.dataStore!
+      passDataToNameListDetail(source:  dataStore!, destination: &destinationDS)
+      navigateToNameListDetail(source: viewController!, destination: destinationVC)
+  }
 
   // MARK: Navigation
   
-  //func navigateToSomewhere(source: NameListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
+  func navigateToNameListDetail(source: NameListViewController, destination: NameListDetailViewController)
+  {
+      source.show(destination, sender: source.self)
+ 
+  }
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: NameListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+  func passDataToNameListDetail(source: NameListDataStore, destination: inout NameListDetailDataStore)
+  {
+      let selectedRow = viewController?.nameListView.tableView.indexPathForSelectedRow?.row
+      let selectedName = source.name?[selectedRow!].name
+      guard let finalName = selectedName else { return  }
+      destination.name = finalName
+  }
 }
